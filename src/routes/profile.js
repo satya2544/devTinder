@@ -26,7 +26,7 @@ profileRouter.patch("/profile/edit",userAuth, async (req,res) => {
     await loggedInUser.save();
 
     console.log(loggedInUser);
-    res.send(`${loggedInUser.firstName}  Sucessfully edited data`)
+    res.status(200).json({data: loggedInUser})
  } catch (err) {
     res.status(400).send("ERROR : " + err.message)
  }  

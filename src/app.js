@@ -113,7 +113,7 @@ initializeSocket(server);
 connectDB().then(() => {
     console.log("data base connection success")
     server.listen(3009, ()=> {
-        console.log("Server is successfully listening on port")
+        console.log("Server is successfully listening on port 3009...")
     });
   }).catch((err)=>{
     console.error("data base cannot be connected")
